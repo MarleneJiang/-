@@ -1,0 +1,159 @@
+module pursue(
+    input clk,
+    input rst,
+    input c,
+    input p,
+    output reg [15:0] pursue_led
+);
+
+//时钟降频2Hz
+reg [25:0] cnt1;
+always@(posedge clk or negedge rst ) begin
+    if(!rst)
+        cnt1 <= 16'd0;
+    else if (cnt1 <= 26'd25000000)
+        cnt1 <= cnt1 +1'b1;
+    else
+        cnt1 <= 16'd0;
+end
+
+reg clk_low1;
+always@(posedge clk or negedge rst ) begin
+    if(!rst)
+        clk_low1 <= 1'b0;
+    else if (cnt1 <= 26'd12499999) begin
+        clk_low1 <= 1'b0;
+    end
+    else
+        clk_low1 <= 1'b1;
+end
+
+reg isStop1 = 1'b0;
+reg isStop2 = 1'b0;
+//顺时针跑
+function [15:0] pursueL;
+  input [15:0]cur;
+  input [1:0]pursue;
+  begin
+		if (cur==16'h8000)
+			 pursueL = 16'h0001;
+		else begin
+			 if (cur == 16'h0800 && pursue == 2'b00 && isStop1 == 1'b0) begin
+			     pursueL = cur;
+				  isStop1 = 1'b1;
+			 end
+			 else if (cur == 16'h0200 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueL = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h0040 && pursue == 2'b00 && isStop1 == 1'b0) begin
+			     pursueL = cur;
+				  isStop1 = 1'b1;
+			 end
+			 else if (cur == 16'h4000 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueL = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h0002 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueL = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h2000 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueL = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h1000 && pursue == 2'b00 && isStop1 == 1'b0) begin
+			     pursueL = cur;
+				  isStop1 = 1'b1;
+			 end
+			 else begin
+			     pursueL = cur<<1;
+				  isStop1 = 1'b0;
+		        isStop2 = 1'b0;
+			 end
+	   end
+  end
+endfunction
+
+//逆时针跑
+function [15:0] pursueR;
+  input [15:0]cur;
+  input [1:0]pursue;
+  begin
+		if (cur==16'h0001)
+			 pursueR = 16'h8000;
+		else begin
+			 if (cur == 16'h0100 && pursue == 2'b00 && isStop1 == 1'b0) begin
+			     pursueR = cur;
+				  isStop1 = 1'b1;
+			 end
+			 else if (cur == 16'h0200 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueR = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h0040 && pursue == 2'b00 && isStop1 == 1'b0) begin
+			     pursueR = cur;
+				  isStop1 = 1'b1;
+			 end
+			 else if (cur == 16'h4000 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueR = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h0010 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueR = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h0020 && pursue == 2'b11 && isStop2 == 1'b0) begin
+			     pursueR = cur;
+				  isStop2 = 1'b1;
+			 end
+			 else if (cur == 16'h0200 && pursue == 2'b00 && isStop1 == 1'b0) begin
+			     pursueR = cur;
+				  isStop1 = 1'b1;
+			 end
+			 else begin
+			     pursueR = cur>>1;
+				  isStop1 = 1'b0;
+		        isStop2 = 1'b0;
+			 end
+	   end
+  end
+endfunction
+
+
+reg [15:0] pursue1;
+reg [15:0] pursue2;
+//降频后的CLK即clk_low1，触发后续操作
+always@(posedge clk_low1 or negedge rst ) begin
+    if(!rst) begin
+        pursue1 <= 16'h8000;
+		  pursue2 <= 16'h0080;
+		  isStop1 <= 1'b0;
+		  isStop2 <= 1'b0;
+		  pursue_led <= 16'h8000 + 16'h0080;
+	 end
+    else if (pursue1 != pursue2)begin
+		  if(c == 1)
+           pursue1 = pursueR(pursue1,2'b00);
+		  else
+		     pursue1 = pursueL(pursue1,2'b00);
+			  
+		  if(p == 1)
+           pursue2 = pursueR(pursue2,2'b11);
+		  else
+		     pursue2 = pursueL(pursue2,2'b11);
+			  
+		  if (pursue1 == pursue2)
+		    pursue_led = 16'hFFFF;
+		  else
+		    pursue_led = pursue1 + pursue2;
+		  
+    end
+    else begin
+        pursue1 <= 16'h8000;
+		  pursue2 <= 16'h0080;
+//		  pursue_led <= 16'h8000 + 16'h0080;
+		  pursue_led <= 16'hFFFF;
+    end
+end
+endmodule

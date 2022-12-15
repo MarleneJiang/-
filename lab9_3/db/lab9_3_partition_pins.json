@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "CLED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PLED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VLED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VLED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RST",
+					"strict" : false
+				},
+				{
+					"name" : "C",
+					"strict" : false
+				},
+				{
+					"name" : "P",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

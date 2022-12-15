@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 125C Model Setup 'pursue:inst3|clk_low1'
+Slack : -7.418
+TNS   : -322.800
+
+Type  : Slow 1200mV 125C Model Setup 'CLK'
+Slack : -3.351
+TNS   : -224.510
+
+Type  : Slow 1200mV 125C Model Setup 'pursue:inst3|clk_low2'
+Slack : -0.695
+TNS   : -1.418
+
+Type  : Slow 1200mV 125C Model Setup 'dig8_2:inst|clk_low1'
+Slack : 0.077
+TNS   : 0.000
+
+Type  : Slow 1200mV 125C Model Hold 'pursue:inst3|clk_low1'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 125C Model Hold 'CLK'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 125C Model Hold 'dig8_2:inst|clk_low1'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 125C Model Hold 'pursue:inst3|clk_low2'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 125C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -127.908
+
+Type  : Slow 1200mV 125C Model Minimum Pulse Width 'pursue:inst3|clk_low1'
+Slack : -1.487
+TNS   : -83.272
+
+Type  : Slow 1200mV 125C Model Minimum Pulse Width 'pursue:inst3|clk_low2'
+Slack : -1.487
+TNS   : -7.435
+
+Type  : Slow 1200mV 125C Model Minimum Pulse Width 'dig8_2:inst|clk_low1'
+Slack : -1.487
+TNS   : -2.974
+
+Type  : Slow 1200mV -40C Model Setup 'pursue:inst3|clk_low1'
+Slack : -6.271
+TNS   : -273.656
+
+Type  : Slow 1200mV -40C Model Setup 'CLK'
+Slack : -2.827
+TNS   : -186.819
+
+Type  : Slow 1200mV -40C Model Setup 'pursue:inst3|clk_low2'
+Slack : -0.469
+TNS   : -0.760
+
+Type  : Slow 1200mV -40C Model Setup 'dig8_2:inst|clk_low1'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'pursue:inst3|clk_low1'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'CLK'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'pursue:inst3|clk_low2'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'dig8_2:inst|clk_low1'
+Slack : 0.358
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -110.940
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'pursue:inst3|clk_low1'
+Slack : -1.285
+TNS   : -71.960
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'pursue:inst3|clk_low2'
+Slack : -1.285
+TNS   : -6.425
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'dig8_2:inst|clk_low1'
+Slack : -1.285
+TNS   : -2.570
+
+Type  : Fast 1200mV -40C Model Setup 'pursue:inst3|clk_low1'
+Slack : -2.871
+TNS   : -121.220
+
+Type  : Fast 1200mV -40C Model Setup 'CLK'
+Slack : -0.944
+TNS   : -57.282
+
+Type  : Fast 1200mV -40C Model Setup 'pursue:inst3|clk_low2'
+Slack : 0.218
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Setup 'dig8_2:inst|clk_low1'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'pursue:inst3|clk_low1'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'CLK'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'pursue:inst3|clk_low2'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'dig8_2:inst|clk_low1'
+Slack : 0.183
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -91.990
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'pursue:inst3|clk_low1'
+Slack : -1.000
+TNS   : -56.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'pursue:inst3|clk_low2'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'dig8_2:inst|clk_low1'
+Slack : -1.000
+TNS   : -2.000
+
+------------------------------------------------------------

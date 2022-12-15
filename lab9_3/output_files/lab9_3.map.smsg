@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at pursue.v(83): always construct contains both blocking and non-blocking assignments File: F:/shudian/labs/lab9_3/pursue.v Line: 83
+Warning (10268): Verilog HDL information at pursue.v(212): always construct contains both blocking and non-blocking assignments File: F:/shudian/labs/lab9_3/pursue.v Line: 212
